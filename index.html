@@ -1,5 +1,82 @@
-<html>
-  <h1>y-redhat</h1>
-  <h2><a href = " https://724163-boop.github.io/y-redhat.aboutme/">about me</a></h2>
-  <h2><a href = "">my skill</a></h2>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>y-redhat</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(270deg, #1a1a2e, #16213e, #0f3460);
+            animation: gradient 15s ease infinite;
+            background-size: 400% 400%;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem; /* 大きな画面用 */
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: 1.5rem; /* 大きな画面用 */
+        }
+
+        .button {
+            background-color: #bb86fc;
+            color: #ffffff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem; /* 大きな画面用 */
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 10px 0;
+        }
+
+        .button:hover {
+            background-color: #ffffff;
+            color: #bb86fc;
+            transform: scale(1.05);
+        }
+
+        /* スマートフォン向けのスタイル */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem; /* スマホ用 */
+            }
+
+            h2 {
+                font-size: 1.2rem; /* スマホ用 */
+            }
+
+            .button {
+                font-size: 1rem; /* スマホ用 */
+                padding: 10px 20px; /* スマホ用 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>y-redhat</h1>
+    <h2><a class="button" href="https://724163-boop.github.io/y-redhat.aboutme/">about me</a></h2>
+    <h2><a class="button" href="https://724163-boop.github.io/y-redhat.skill/">my skill</a></h2>
+    <h2><a class="button" href="https://724163-boop.github.io/y-redhat.works/">works</a></h2>
+</body>
 </html>
