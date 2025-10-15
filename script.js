@@ -10,3 +10,4 @@ document.getElementById('b_btn').addEventListener('click', function() {
 
 // 初期表示を設定
 document.querySelector('.a_screen').classList.add('active');
+document.querySelector('.b_screen').classList.remove('active'); // これを追加して、初期状態でb_screenを非表示にする
