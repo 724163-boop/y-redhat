@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>y-redhat</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSSファイルのリンク -->
+    <style>
+        /* ここにCSSを追加することもできます */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .buttons {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .screen {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .a_screen, .b_screen {
+            display: none; /* 初期状態では非表示 */
+        }
+
+        .a_screen.active, .b_screen.active {
+            display: block; /* アクティブな画面のみ表示 */
+        }
+    </style>
+</head>
+<body>
+    <!-- ➀切り替えボタン -->
+    <div class="buttons">
+        <!-- ➁ボタン単体 -->
+        <button class="button" id="a_btn">my name</button>
+        <button class="button" id="b_btn">about me</button>     
+    </div>
+
+    <!-- ➂切り替え画面 -->
+    <div class="screen">
+        <!-- ➃A画面 -->
+        <div class="a_screen">
+            <h1>y-redhat</h1>
+        </div>
+
+        <!-- ➄B画面 -->
+        <div class="b_screen">
+            <p>日本語</p>
+            <p>どっかの中学生 これは実用的な2個目のwebサイト。ここからわかると思うが初心者です。</p>
+            <p>書けるであろものたち HTML、Js、Py、CSS</p>
+            <p>正直cssはわかるが書けない</p>
+            <p>ペネトレーションテストとハードウェアを学習中</p>
+            <p>学校の成績やばいから最近まったく上記の学習できてない</p>
+            <p>Xアカウント：<a href="https://x.com/LuHxiOWl3t91052">https://x.com/LuHxiOWl3t91052</a> 名前 y-redhat</p>
+        </div>
+    </div>
+
+    <script>
+        // ボタンにイベントリスナーを追加
+        document.getElementById('a_btn').addEventListener('click', function() {
+            document.querySelector('.a_screen').classList.add('active');
+            document.querySelector('.b_screen').classList.remove('active');
+        });
+
+        document.getElementById('b_btn').addEventListener('click', function() {
+            document.querySelector('.b_screen').classList.add('active');
+            document.querySelector('.a_screen').classList.remove('active');
+        });
+
+        // 初期表示を設定
+        document.querySelector('.a_screen').classList.add('active');
+    </script>
+</body>
+</html>
